@@ -1,6 +1,6 @@
 <?php
 
-namespace Plumbum;
+namespace PHPixie;
 
 /**
  * Haml plugin for PHPixie. 
@@ -58,7 +58,7 @@ class Pixtache {
 	 * @return \PHPixie\Haml\View
 	 */
 	public function get($name) {
-		return new \Plumbum\Pixtache\View($this->pixie, $this->pixie->view_helper(), $name);
+		return new \PHPixie\Pixtache\View($this->pixie, $this->pixie->view_helper(), $name);
 	}
 	
 }

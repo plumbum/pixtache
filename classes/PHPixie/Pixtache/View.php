@@ -1,6 +1,6 @@
 <?php
 
-namespace Plumbum\Pixtache;
+namespace PHPixie\Pixtache;
 
 /**
  * Haml View.
