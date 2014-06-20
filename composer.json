@@ -1,0 +1,27 @@
+{
+    "name": "plumbum/pixtache",
+    "description": "Mustache templates for PHPixie",
+    "keywords": ["mustache", "templating"],
+    "homepage": "https://github.com/plumbum/pixtache",
+    "type": "library",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Ivan A. Alferov",
+            "email": "ivalrom@gmail.com",
+            "homepage": "http://tuxotronic.org"
+        }
+    ],
+    "require": {
+        "phpixie/core": "2.*@dev",
+        "mustache/mustache": "2.*"
+    },
+    "autoload": {
+        "psr-0": {"PHPixie": "classes/"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        }
+    }
+}
