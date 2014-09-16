@@ -58,7 +58,17 @@ class Pixtache {
 	 * @return \PHPixie\Haml\View
 	 */
 	public function get($name) {
-		return new \PHPixie\Pixtache\View($this->pixie, $this->pixie->view_helper(), $name);
+		$template_dir = $this->pixie->config->get('pixtache.template_dir','views');
+
+        $file = $this->pixie->find_file($template_dir, $name, 'class.php');
+
+        if($file) {
+            include_once($file);
+            $class = '\\PHPixie\\Pixtache\\View\\'.ucfirst(strtolower($name));
+            return new $class($this->pixie, $this->pixie->view_helper(), $name);
+        } else {
+            return new \PHPixie\Pixtache\View($this->pixie, $this->pixie->view_helper(), $name);
+        }
 	}
 	
 }
